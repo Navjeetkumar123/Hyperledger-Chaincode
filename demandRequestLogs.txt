@@ -1,0 +1,116 @@
+POST request Enroll on Org1  ...
+
+{"success":true,"secret":"","message":"Jim enrolled Successfully","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTQzMjg2NzEsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Im9yZzEiLCJpYXQiOjE1MTQyOTI2NzF9.ytBak5v7etfILtEK_Kqqh-L9IioBclK5P-f_68BqeYo"}
+
+ORG1 token is eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1MTQzMjg2NzEsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Im9yZzEiLCJpYXQiOjE1MTQyOTI2NzF9.ytBak5v7etfILtEK_Kqqh-L9IioBclK5P-f_68BqeYo
+
+
+POST Install chaincode on Org1
+
+Transacton ID is Successfully Installed chaincode on organization org1
+
+
+POST instantiate chaincode on peer1 of Org1
+
+Transacton ID is Chaincode Instantiation is SUCCESS
+
+
+POST invoke chaincode on peers of Org1
+create a DemandRequest....
+
+Transacton ID is 71e5f933f1ed59db290bb7f88788b2e51cb41e3f947c354444f663afbaed489f
+
+DemandRequest created successfully
+GET query chaincode on peer1 of Org1
+
+{"drid":"DR1","prid":"PR1","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"}
+
+POST invoke chaincode on peers of Org1
+create a DemandRequest....
+
+Transacton ID is 75fdf6b5ea572e758aa546c202abfd12ebb891b77d96558083c1a200d3734241
+
+DemandRequest created successfully
+GET query chaincode on peer1 of Org1
+
+{"drid":"DR2","prid":"PR2","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus1","uniper_id":"uni1","created_by":"cus2","updated_by":"cus1","last_update_timestamp":"12/12/2017"}
+
+POST invoke chaincode on peers of Org1
+create a DemandRequest....
+
+Transacton ID is bed5dd75d21c82059d6eeb89915314645deff19fe3fcc3a0bc6ae083659c1291
+
+DemandRequest created successfully
+GET query chaincode on peer1 of Org1
+
+{"drid":"DR3","prid":"PR3","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus2","uniper_id":"uni1","created_by":"cus2","updated_by":"cus2","last_update_timestamp":"12/12/2017"}
+
+update a DemandRequest....
+
+Transacton ID is f3e14658df642e2a576033cac4ecccc6ffb59ec87c112c759f092aeb7917ae06
+
+updated the DemandRequest successfully
+GET query chaincode on peer1 of Org1
+
+{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TR","delivery_date":"14/12/2017","status":"Uniper Accepted","counter_offer_count":"1","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"uni1","last_update_timestamp":"12/12/2017"}
+
+update a DemandRequest....
+
+Transacton ID is f4ca134e2889d3bb6f3baaae58fdc4562f9358b5a591b3b21fe567787e042d6a
+
+updated the DemandRequest successfully
+GET query chaincode on peer1 of Org1
+
+{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","status":"Confirmed Trade","counter_offer_count":"2","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"}
+
+getting All DemandRequests....
+
+[{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","status":"Confirmed Trade","counter_offer_count":"2","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"},{"drid":"DR2","prid":"PR2","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus1","uniper_id":"uni1","created_by":"cus2","updated_by":"cus1","last_update_timestamp":"12/12/2017"},{"drid":"DR3","prid":"PR3","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus2","uniper_id":"uni1","created_by":"cus2","updated_by":"cus2","last_update_timestamp":"12/12/2017"}]
+Fetched All DemandRequests....
+
+getting All DemandRequests by Customer....
+
+[{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","status":"Confirmed Trade","counter_offer_count":"2","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"},{"drid":"DR2","prid":"PR2","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus1","uniper_id":"uni1","created_by":"cus2","updated_by":"cus1","last_update_timestamp":"12/12/2017"}]
+Fetched All DemandRequests by Customer....
+
+getting All DemandRequests by Status....
+
+
+Fetched All DemandRequests by Status....
+
+getting DemandRequests's History....
+
+[{"TxId":"71e5f933f1ed59db290bb7f88788b2e51cb41e3f947c354444f663afbaed489f", "Value":{"drid":"DR1","prid":"PR1","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"}, "Timestamp":"2017-12-26 12:51:22.724 +0000 UTC", "IsDelete":"false"},{"TxId":"f3e14658df642e2a576033cac4ecccc6ffb59ec87c112c759f092aeb7917ae06", "Value":{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TR","delivery_date":"14/12/2017","status":"Uniper Accepted","counter_offer_count":"1","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"uni1","last_update_timestamp":"12/12/2017"}, "Timestamp":"2017-12-26 12:51:29.014 +0000 UTC", "IsDelete":"false"},{"TxId":"f4ca134e2889d3bb6f3baaae58fdc4562f9358b5a591b3b21fe567787e042d6a", "Value":{"drid":"DR1","prid":"PR1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","status":"Confirmed Trade","counter_offer_count":"2","customer_id":"cus1","uniper_id":"uni1","created_by":"cus1","updated_by":"cus1","last_update_timestamp":"12/12/2017"}, "Timestamp":"2017-12-26 12:51:31.104 +0000 UTC", "IsDelete":"false"}]
+Fetched DemandRequest's History....
+
+getting Confirmed Trade For Customer....
+
+[{"ctid":"CT1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","customer_id":"cus1","uniper_id":"uni1","drid":"DR1","supplier_name":"sup1","source_location_country":"DR","source_location_city":"IND","supplier_load_date":"13/12/2017","transporter_name":"tr1","container_load_date":"14/12/2017","load_port":"MU","container_discharge_date":"15/12/2017","discharge_port":"BY"}]
+Fetched Confirmed Trade For Customer....
+
+getting Confirmed Trade For Supplier....
+
+[{"ctid":"CT1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","customer_id":"cus1","uniper_id":"uni1","drid":"DR1","supplier_name":"sup1","source_location_country":"DR","source_location_city":"IND","supplier_load_date":"13/12/2017","transporter_name":"tr1","container_load_date":"14/12/2017","load_port":"MU","container_discharge_date":"15/12/2017","discharge_port":"BY"}]
+Fetched Confirmed Trade For Supplier....
+
+getting Confirmed Trade For Transporter....
+
+[{"ctid":"CT1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","customer_id":"cus1","uniper_id":"uni1","drid":"DR1","supplier_name":"sup1","source_location_country":"DR","source_location_city":"IND","supplier_load_date":"13/12/2017","transporter_name":"tr1","container_load_date":"14/12/2017","load_port":"MU","container_discharge_date":"15/12/2017","discharge_port":"BY"}]
+Fetched Confirmed Trade For Transporter....
+
+getting Confirmed Trade For Uniper....
+
+[{"ctid":"CT1","volume":"500","price":"5000","delivery_location_country":"GD","delivery_location_city":"TF","delivery_date":"14/12/2017","customer_id":"cus1","uniper_id":"uni1","drid":"DR1","supplier_name":"sup1","source_location_country":"DR","source_location_city":"IND","supplier_load_date":"13/12/2017","transporter_name":"tr1","container_load_date":"14/12/2017","load_port":"MU","container_discharge_date":"15/12/2017","discharge_port":"BY"}]
+Fetched Confirmed Trade For Uniper....
+
+deleting a DemandRequest....
+
+Transacton ID is Failed to order the transaction. Error code: undefined
+deleted a DemandRequest
+
+
+GET query chaincode on peer1 of Org1
+Fetching a deleted DemandRequest by ID
+{"drid":"DR3","prid":"PR3","volume":"100","price":"1000","delivery_location_country":"EC","delivery_location_city":"GT","delivery_date":"13/12/2017","status":"New","counter_offer_count":"0","customer_id":"cus2","uniper_id":"uni1","created_by":"cus2","updated_by":"cus2","last_update_timestamp":"12/12/2017"}
+
+Total execution time : 22 secs ...
